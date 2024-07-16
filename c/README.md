@@ -1,13 +1,13 @@
 ## res_pbxhelper.c
 If you use an explicit transport definition in endpoints, you will not get the transport name in the dialplan. This module assigns the transport name on the incoming channel to the channel variable named "TRANSPORT_ID". It works only on the incoming channel.
 
-``` bash
+``` console
 exten => n,NoOp(${TRANSPORT_ID})
 
     -- Executing [1001@from-inside:2] NoOp("PJSIP/1001-00000000", "transportX") in new stack
 ```
 
-``` config
+``` ini
 [transportX]
 type=transport
 bind=x.x.x.x:5060
